@@ -88,6 +88,22 @@ body {
   Clearfix
   ========================================
 */
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    clear: both;
+    *zoom: 1;
+}
+
 /*
   ========================================
   Rows
@@ -99,7 +115,7 @@ body {
   ========================================
 */
 h1, h2, h3, h4 {
-    color: #648880;
+    color: #1a89c7;
 }
 
 h1, h3, h4, h5, p {
@@ -147,6 +163,15 @@ em {
   ========================================
 */
 
+.lead {
+    text-align: center;
+}
+
+.lead p {
+    font-size: 21px;
+    line-height: 33px;
+}
+
 
 /*
   ========================================
@@ -172,10 +197,10 @@ p a {
     color: #fff;
 }
 
-    .primary-header a:hover,
-    .primary-footer a:hover {
+.primary-header a:hover,
+.primary-footer a:hover {
         color: #1a89c7;
-    }
+}
 
 /*
   ========================================
@@ -183,6 +208,26 @@ p a {
   ========================================
 */
 
+.btn {
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: .5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.btn-alt {
+    border: 1px solid #fff;
+    padding: 10px 30px;
+}
+
+    .btn-alt:hover {
+        background: #fff;
+        color: #1a89c7;
+    }
 
 /*
   ========================================
@@ -232,3 +277,18 @@ p a {
   ========================================
 */
 
+.box1 {
+    color: #fff;
+    line-height: 44px;
+    padding: 22px 80px 66px 80px;
+    text-align: center;
+}
+
+.box1 h2 {
+    font-size: 36px;
+}
+
+.box1 p {
+    font-size: 24px;
+    font-weight: 100;
+}
