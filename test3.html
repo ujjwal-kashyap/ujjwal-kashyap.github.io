@@ -1,0 +1,44 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <!--uk regular stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Artista</title>
+    <!--uk for proper rendering on mobile and zoom off-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+
+  <body>
+    <div>
+      <!-- TODO, study impact of viewBox -->
+      <svg  width="1080"
+            height="1920"
+            viewBox="0 0 1080 1920"
+            xmlns="http://www.w3.org/2000/svg" version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <rect id="animeBg1" class="animeBg" width="1080" height="1920" fill="blue" />
+        <circle id="ball1" class="ball" cx="520" cy="1700" r="100"/>
+      </svg>
+
+      <script>
+        //this is keyframes
+        var ballBounce = [
+          {transform:'translate3D(0px,0px,0px)', color:'black'},
+          {transform:'translate3D(0px,-1500px,0px)', color:'white'},
+          {transform:'translate3D(0px,0px,0px)', color:'blue'}
+        ];
+
+        var bounceTime = {
+          duration: 1000,
+          iterations: Infinity
+        };
+
+        var ball = document.getElementById("ball1");
+        ball.animate(ballBounce,bounceTime);
+
+      </script>
+    </div>
+  </body>
+</html>
