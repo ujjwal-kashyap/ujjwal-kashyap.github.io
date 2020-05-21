@@ -1,0 +1,32 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <!--uk regular stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Artista</title>
+    <!--uk for proper rendering on mobile and zoom off-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+
+  <body>
+    <!-- TODO, study impact of viewBox -->
+    <svg  width="1080"
+          height="1920"
+          viewBox="0 0 1080 1920"
+          xmlns="http://www.w3.org/2000/svg" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+    />
+
+    <script>
+      var story = d3.select("svg");
+      var storyBg = story.append("rect").attr("fill","blue").attr("width",1080).attr("height",1920);
+      var ball = story.append("circle").attr("fill","yellow").attr("cx",520).attr("cy",1700).attr("r",100);
+
+      ball.transition().ease(d3.easeSin).duration(500).attr("cy",500)
+          .transition().ease(d3.easeSin).duration(500).attr("cy",1700)
+
+    </script>
+  </body>
+</html>
