@@ -12,16 +12,16 @@
 
   <body>
     <!-- TODO, study impact of viewBox -->
-    <svg  width="1080"
-          height="1920"
-          viewBox="0 0 1080 1920"
+    <svg  width="1072"
+          height="1904"
+          viewBox="0 0 1072 1904"
           xmlns="http://www.w3.org/2000/svg" version="1.1"
           xmlns:xlink="http://www.w3.org/1999/xlink"
     />
 
     <script>
       var story = d3.select("svg");
-      var storyBg = story.append("rect").attr("fill","blue").attr("width",1080).attr("height",1920);
+      var storyBg = story.append("rect").attr("fill","blue").attr("width",1072).attr("height",1904);
       var ball = story.append("circle").attr("fill","yellow").attr("cx",520).attr("cy",1700).attr("r",100);
 
       ball.transition().ease(d3.easeSin).duration(500).attr("cy",500)
