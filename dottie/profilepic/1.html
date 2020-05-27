@@ -13,8 +13,15 @@
             xmlns:xlink="http://www.w3.org/1999/xlink"
       >
         <rect id="animeBg1" class="animeBg" width="180" height="180" fill="blue" />
-        <circle id="animeBg2" class="animeBg" cx="90" cy="90" r="90" fill="green"/>
-        <circle id="ball1" class="ball" cx="520" cy="1700" r="50" fill="yellow"/>
+        <circle id="animeBg2" class="animeBg" cx="90" cy="90" r="90" fill="green" />
+        <circle id="dottie" class="ball" cx="90" cy="160" r="20" fill="yellow" />
+
+        <animate xlink:href="#dottie" attributeType="CSS" attributeName="cy"
+           from="160" to="160" dur="2s" repeatCount="indefinite"
+           values="160; 90; 20; 90; 160" keyTimes="0; 0.25; 0.5; 0.75; 1" />
+        <animate xlink:href="#dottie" attributeType="CSS" attributeName="cx"
+           from="160" to="160" dur="2s" repeatCount="indefinite"
+           values="90; 20; 90; 160; 90" keyTimes="0; 0.25; 0.5; 0.75; 1" />
       </svg>
     </div>
   </body>
