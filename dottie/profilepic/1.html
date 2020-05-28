@@ -28,11 +28,32 @@
         75%  {cx:160; cy:90;}
         100% {cx:90; cy:160;}
       }
+
+      #ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #0b7dc4;
+        left: 0px;
+        top: 0px;
+        animation-name: example;
+        animation-duration: 2s;
+      }
+
+      @keyframes example {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+      }
+
     </style>
   </head>
 
   <body>
-    <div>
+    <div id="ball">
+      <!--
       <svg  width="180"
             height="180"
             viewBox="0 0 180 180"
@@ -40,8 +61,8 @@
             xmlns:xlink="http://www.w3.org/1999/xlink"
       >
         <circle id="animeBg1" class="animeBg" />
-        <circle id="dottie" class="ball" cx="90" cy="160" r="20" />
-      </svg>
+        <circle id="dottie" class="ball" />
+      </svg> -->
     </div>
   </body>
 </html>
