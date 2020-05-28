@@ -34,14 +34,17 @@
         height: 100px;
         border-radius: 50%;
         background-color: #0b7dc4;
+        position: relative;
         left: 0px;
         top: 0px;
-        animation-name: example;
-        animation-duration: 2s;
+        -webkit-animation-name: example;
+                animation-name: example;
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
       }
 
       @keyframes example {
-        0%   {background-color:red; left:0px; top:0px;}
+        0%   {background-color:red; left:0px; top:0px}
         25%  {background-color:yellow; left:200px; top:0px;}
         50%  {background-color:blue; left:200px; top:200px;}
         75%  {background-color:green; left:0px; top:200px;}
