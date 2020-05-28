@@ -3,15 +3,20 @@
   <head>
     <title>Dottie</title>
     <style>
+      .container {
+        display: -webkit-box;
+        display: flex;
+      }
+
       #animeBg1 {
         cx: 90;
         cy: 90;
         r: 90;
         -webkit-animation-name: colorBg;
-        -webkit-animation-duration: 2s;
+        -webkit-animation-duration: 1s;
         -webkit-animation-iteration-count: infinite;
         animation-name: colorBg;
-        animation-duration: 2s;
+        animation-duration: 0.5s;
         animation-iteration-count: infinite;
       }
 
@@ -63,7 +68,7 @@
   </head>
 
   <body>
-    <div>
+    <div class="container">
       <svg  width="180"
             height="180"
             viewBox="0 0 180 180"
