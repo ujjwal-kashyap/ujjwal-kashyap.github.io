@@ -4,10 +4,30 @@
     <title>Dottie</title>
     <style>
       #dottie {
-        fill : #a1d0eb;
-        r : 20px;
-        cx : 90px;
-        cy : 160px;
+        -webkit-animation-name: moveDottie;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-name: moveDottie;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @-webkit-keyframes moveDottie {
+        0%   {cx:90; cy:160;}
+        25%  {cx:20; cy:90;}
+        50%  {cx:90; cy:20;}
+        75%  {cx:160; cy:90;}
+        100% {cx:90; cy:160;}
+      }
+
+      @keyframes moveDottie {
+        0%   {cx:90; cy:160;}
+        25%  {cx:20; cy:90;}
+        50%  {cx:90; cy:20;}
+        75%  {cx:160; cy:90;}
+        100% {cx:90; cy:160;}
       }
     </style>
   </head>
@@ -20,8 +40,8 @@
             xmlns="http://www.w3.org/2000/svg" version="1.1"
             xmlns:xlink="http://www.w3.org/1999/xlink"
       >
-        <circle id="animeBg1" class="animeBg" cx="90" cy="90" r="90" fill="#0b7dc4" />
-        <circle id="dottie" class="ball" />
+        <circle id="animeBg1" class="animeBg" cx="90" cy="90" r="90" fill="#a1d0eb" />
+        <circle id="dottie" class="ball" r="20" fill="#0b7dc4" cx="90" cy="160" />
       </svg>
     </div>
   </body>
