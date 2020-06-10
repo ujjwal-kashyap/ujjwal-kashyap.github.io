@@ -15,6 +15,7 @@ var constraints = window.constraints = {
                 maxHeight: 650,
                 frameRate: 30
             }
+      }
 };
 
 function handleSuccess(stream) {
