@@ -12,8 +12,7 @@ var constraints = window.constraints = {
                 minWidth: 450,
                 maxWidth: 450,
                 minHeight: 650,
-                maxHeight: 650,
-                frameRate: 30
+                maxHeight: 650
             }
       }
 };
