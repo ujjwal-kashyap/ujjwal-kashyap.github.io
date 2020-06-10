@@ -1,7 +1,4 @@
-chrome.runtime.onMessage.addListener(async stream => {
-
-  var errorElement = document.querySelector('#errorMsg');
-  var video = document.querySelector('video');
+chrome.runtime.onMessage.addListener(async request => {
 
   // Put variables in global scope to make them available to the browser console.
   var constraints = window.constraints = {
