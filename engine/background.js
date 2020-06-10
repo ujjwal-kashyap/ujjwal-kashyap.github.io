@@ -1,3 +1,58 @@
+chrome.runtime.onMessage.addListener(async stream => {
+  (async () => {
+
+
+    const file = new File();
+    await file.open();
+    const mediaRecorder = new MediaRecorder(stream, {
+      mime: 'video/webm'
+    });
+    const capture = () => {
+      mediaRecorder.requestData();
+      capture.id = setTimeout(capture, 5000);
+    };
+    capture.offset = 0;
+    capture.progress = 0;
+
+    mediaRecorder.addEventListener('error', e => notify(e.message));
+    mediaRecorder.addEventListener('dataavailable', e => {
+      const download = () => {
+        if (capture.progress === 0 && mediaRecorder.state === 'inactive') {
+
+          file.download('capture.webm', 'video/webm').then(() => file.remove()).catch(e => {
+            console.warn(e);
+          });
+        }
+      };
+      if (e.data.size) {
+        capture.progress += 1;
+        const reader = new FileReader();
+        reader.onload = e => {
+          file.chunks({
+            offset: capture.offset,
+            buffer: new Uint8Array(e.target.result)
+          }).then(() => {
+            capture.progress -= 1;
+            download();
+          });
+        };
+        reader.readAsArrayBuffer(e.data);
+        capture.offset += 1;
+      }
+      else {
+        download();
+      }
+    });
+    stream.oninactive = stream.onremovetrack = stream.onended = () => {
+      clearTimeout(capture.id);
+      mediaRecorder.stop();
+    };
+    mediaRecorder.start();
+    capture();
+
+  })();
+});
+
 
 /**
     Turbo Download Manager - .A download manager with the ability to pause and resume downloads
