@@ -6,7 +6,15 @@ var video = document.querySelector('#video');
 // Put variables in global scope to make them available to the browser console.
 var constraints = window.constraints = {
   audio: false,
-  video: true
+  video: {
+            mandatory: {
+                chromeMediaSource: 'desktop',
+                minWidth: 450,
+                maxWidth: 450,
+                minHeight: 650,
+                maxHeight: 650,
+                frameRate: 30
+            }
 };
 
 function handleSuccess(stream) {
