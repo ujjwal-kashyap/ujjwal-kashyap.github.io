@@ -84,6 +84,9 @@ var constraints = window.constraints = {
   }
 };
 
-navigator.mediaDevices.getDisplayMedia(constraints)
-    .then(handleSuccess)
-    .catch(handleError);
+try {
+  let mediaStream = await navigator.mediaDevices.getDisplayMedia(constraints);
+  handleSuccess(mediaStream);
+} catch (e) {
+  handleError(e);
+}
