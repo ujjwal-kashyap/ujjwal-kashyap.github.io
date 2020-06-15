@@ -75,6 +75,13 @@ function errorMsg(msg, error) {
   }
 }
 
+
+async function startCapture(displayMediaOptions) {
+  let captureStream = null;
+  captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+  return captureStream;
+}
+
 // Put variables in global scope to make them available to the browser console.
 var constraints = window.constraints = {
   audio: false,
@@ -84,6 +91,6 @@ var constraints = window.constraints = {
   }
 };
 
-navigator.mediaDevices.getDisplayMedia(constraints)
+startCapture(constraints)
     .then(handleSuccess)
     .catch(handleError);
