@@ -15,7 +15,7 @@ function UserAction() {
         // to get date as base64 type
         imageElem.src = 'data:image/jpeg;base64,' + buf;
         //imageElem.height = 500;
-        imageElem.width = 500;
+        //imageElem.width = 500;
         imageElem.border = '2px solid black';
         document.getElementById('result').appendChild(imageElem);
      }
