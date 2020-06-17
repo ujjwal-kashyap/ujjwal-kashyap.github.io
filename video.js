@@ -1,5 +1,4 @@
 function UserAction() {
-
   url ='https://nxul9z35le.execute-api.ap-southeast-2.amazonaws.com/DEV/video';
   axios.get(url,null)
    .then(response => {
@@ -9,21 +8,23 @@ function UserAction() {
      for(i=0; i<response.data.length; i++) {
        // Buffer for the jpg data
         var buf = response.data[i];
-        // Create an HTML img tag
+
+        var ancorElem = document.createElement('a');
+        ancorElem.classList='carousel-item';
+        ancorElem.id='carousel-item-'+i;
+        ancorElem.href='#'+i+'!';
+        document.getElementById('result').appendChild(ancorElem);
+
         var imageElem = document.createElement('img');
-        // Just use the toString() method from your buffer instance
-        // to get date as base64 type
         imageElem.src = 'data:image/jpeg;base64,' + buf;
-        //imageElem.height = 500;
-        //imageElem.width = 200;
-        imageElem.border = '2px solid black';
-        document.getElementById('result').appendChild(imageElem);
+        document.getElementById('carousel-item-'+i).appendChild(imageElem);
      }
 
-
+     var elems = document.querySelectorAll('.carousel');
+     var options = {}
+     var instances = M.Carousel.init(elems, options);
    })
    .catch(error => {
      console.log(error);
    });
-
 }
