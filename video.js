@@ -21,7 +21,11 @@ function UserAction() {
      }
 
      var elems = document.querySelectorAll('.carousel');
-     var options = {}
+     var options = {
+       duration: 50,
+       numVisible: 7,
+       noWrap: true
+     }
      var instances = M.Carousel.init(elems, options);
    })
    .catch(error => {
