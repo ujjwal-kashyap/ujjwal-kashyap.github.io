@@ -1,0 +1,21 @@
+/*all containers*/
+.ukcnt {
+    /*border: 2px solid blue;*/
+}
+
+/* ========================================
+   body
+   ======================================== */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#websitebody1 {
+  width: 98.7vw;
+  height: 100vh;
+}
+
+
+@media screen and (min-width: 1024px) {
+}

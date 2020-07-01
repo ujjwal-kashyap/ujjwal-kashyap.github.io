@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+        content: '';
+        content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+strong {
+    font-weight: 600;
+}
+
+cite em {
+    font-style: italic;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+
+/* ==========================================================================
+   Start of custom CSS
+   ==========================================================================
+*/
+/* prefixes meaning:
+moz: Firefox
+ms: IE / Edge
+o: Opera
+webkit: Chrome, Safari */
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+:root {
+
+  /* ========================================
+     Colors
+     ========================================
+  */
+
+    /* main colour scheme */
+    --col-accent1: #e7cc3e; /* #fd9c04; */
+    --col-accent1-light: #fae987; /* #ffd94c; */
+    --col-accent1-ll: #fdfad1; /* #fdf5c1; */
+    --col-accent1-dark: #685a0f;
+    --col-accent1-dd: #443a05;
+
+    --col-accent2: #01bf9b; /* #02b99b */
+    --col-accent2-light: #98fee0; /* #81e0b8 */
+    --col-accent2-ll: #d4fff2; /* #e9f9f0 */
+    --col-accent2-dark: #008478; /* #00736d */
+    --col-accent2-dd: #023148; /* #003c4f */
+
+    /* general colours */
+    --white: #ffffff;
+    --black: #000000;
+
+    /* text */
+    --col-text-theme: var(--col-accent2-dd);
+
+    /* ========================================
+        Typography
+       ========================================
+    */
+
+    /* font family */
+    --font-fam: "Montserrat"; /* Raleway */
+
+    /* text - paragraph */
+    --font-size-h6: 10px; /*13px;*/
+    --font-size-h5: 13px; /*13px;*/
+    --font-size-p: 13px; /*15px;*/
+
+    /* text - title */
+    /*--font-size-menu: 17px;*/
+    --font-size-h4: 14px; /*20px;*/
+    --font-size-h3: 16px; /*22px;*/
+
+    /* large text - title */
+    --font-size-h2: 18px; /*16px;*/
+    --font-size-h1: 20px; /*22px;*/
+
+    /* space between lines */
+    --font-lspace-p: 25px; /*h5, h6, p*/
+    --font-lspace-title: 35px; /*6vh;*/ /*h1, h2, h3, h4*/
+
+    /* space between characters */
+    --font-chspace-p: 1px;
+    --font-chspace-h5: 1.2px;
+    --font-chspace-h5: 1.2px;
+    --font-chspace-h4: 1.3px;
+    --font-chspace-h3: 1.3px;
+    --font-chspace-h2: 2px; /*0.2vw;*/
+    --font-chspace-h1: 2px; /*0.5vw;*/
+
+    /* weight (bold) */
+    --font-weight-text: 400; /*500;*/ /*h5, h6, p*/
+    --font-weight-title: 400; /*700;*/ /*h1, h2, h3, h4*/
+
+}
+
+/* default settings */
+h1, h2, h3, h4 {
+    font-family: var(--font-fam);
+    color: var(--col-text-theme);
+    font-weight: var(--font-weight-title);
+    line-height: var(--font-lspace-title);
+}
+
+h5, h6, p {
+    font-family: var(--font-fam);
+    color: var(--col-text-theme);
+    font-weight: var(--font-weight-text);
+    line-height: var(--font-lspace-p);
+}
+
+/* updating settings */
+/* ------ h1 ------ */
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: var(--font-chspace-h1);
+}
+
+/* ------ h2 ------ */
+h2 {
+    font-size: var(--font-size-h2);
+    letter-spacing: var(--font-chspace-h2);
+}
+
+/* ------ h3 ------ */
+h3 {
+    font-size: var(--font-size-h3);
+    letter-spacing: var(--font-chspace-h3);
+}
+
+/* ------ h4 ------ */
+h4 {
+    font-size: var(--font-size-h4);
+    letter-spacing: var(--font-chspace-h4);
+}
+
+/* ------ h5 ------ */
+h5 {
+    font-size: var(--font-size-h5);
+    letter-spacing: var(--font-chspace-h5);
+}
+
+/* ------ h6 ------ */
+h6 {
+    font-size: var(--font-size-h6);
+    letter-spacing: var(--font-chspace-h6);
+}
+
+/* ------ p ------ */
+p {
+    font-size: var(--font-size-p);
+    letter-spacing: var(--font-chspace-p);
+}

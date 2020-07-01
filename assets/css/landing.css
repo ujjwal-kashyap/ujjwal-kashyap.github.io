@@ -1,0 +1,122 @@
+/* ========================================
+   body
+   ======================================== */
+body {
+    background-image: url('../images/bg15.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* placeholder styling - different from actual input */
+::-webkit-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+}
+::-moz-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+}
+::-ms-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+}
+::-o-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+}
+::placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+}
+/* title */
+#cta2 h5 {
+    text-transform: uppercase;
+    font-weight: var(--font-weight-title);
+}
+/* button */
+#button1 h5 {
+    line-height: calc(1.5 * var(--font-size-h4));
+}
+/* manual input - h5 */
+.input {
+    font: var(--font-weight-text) var(--font-size-h5) var(--font-fam);
+    letter-spacing: var(--font-chspace-h5);
+    color: var(--col-footer-text);
+}
+
+.cta {
+  text-align: center;
+  width: 80vw;
+  height: 60vh;
+  position: fixed;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 10vw;
+  top: 20vh;
+}
+
+#cta3 {
+  background-color: var(--white);
+  opacity: 0.85;
+}
+
+/* registration form */
+.input{
+    width: 50vw;
+    height: 20px;
+    border: none;
+    border-bottom: 2px solid var(--black);
+    /*background: var(--white);*/
+}
+
+/* submit button */
+#button1 {
+    background: var(--white);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#button1:hover {
+    background: yellow;
+    border: 2px solid yellow;
+}
+
+@media screen and (min-width: 768px) {
+  .cta {
+    width: 40vw;
+    left: 30vw;
+  }
+
+  .input{
+      width: 30vw;
+    }
+}
+
+/*
+#cta1 {
+  text-align: center;
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  background-color: #3b3bff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#cta1 h4 {
+  color: var(--white);
+}
+
+#cta1:hover {
+  background-color: #2a2a2a;
+}
+
+@media screen and (min-width: 1024px) {
+  #cta1 {
+    width: 300px;
+    right: unset;
+    top: unset;
+    left: 20px;
+    bottom: calc(100vh/3);
+  }
+}
+*/
