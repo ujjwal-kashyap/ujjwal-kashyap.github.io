@@ -1,0 +1,45 @@
+.ukcnt {
+  /*border: 2px solid black;*/
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+#websitebody1 {
+  height: unset;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.cardcnt {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#intro1 {
+  text-align: center;
+}
+
+#intro1 h1 {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+#photo1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#photo1 img {
+  width: 40vw;
+}

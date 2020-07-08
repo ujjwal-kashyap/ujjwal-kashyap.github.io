@@ -171,7 +171,7 @@ h1, h2, h3, h4 {
     line-height: var(--font-lspace-title);
 }
 
-h5, h6, p {
+h5, h6, p, ul, li {
     font-family: var(--font-fam);
     color: var(--col-text-theme);
     font-weight: var(--font-weight-text);
@@ -219,4 +219,16 @@ h6 {
 p {
     font-size: var(--font-size-p);
     letter-spacing: var(--font-chspace-p);
+}
+
+ul {
+    font-size: var(--font-size-p);
+    letter-spacing: var(--font-chspace-p);
+}
+
+li {
+    font-size: var(--font-size-p);
+    letter-spacing: var(--font-chspace-p);
+    list-style-type: disc;
+    list-style-position: inside;
 }
