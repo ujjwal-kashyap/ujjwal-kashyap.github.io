@@ -54,3 +54,42 @@
 #photo1 img {
   width: 40vw;
 }
+
+@media screen and (min-width: 768px) {
+
+  #photo1 {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: unset;
+  }
+
+  #photo1 img {
+    height: 30vh;
+    width: unset;
+    max-height: 300px;
+  }
+
+  #summary1 {
+    background-color: #f2f2f2;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card p {
+    width: 70vw;
+    max-width: 1000px;
+  }
+
+  .card li {
+    align-items: center;
+    width: 70vw;
+    max-width: 1000px;
+  }
+}
