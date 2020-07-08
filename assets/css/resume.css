@@ -20,6 +20,14 @@
   text-align: center;
 }
 
+.card p {
+  text-align: justify;
+}
+
+.card li {
+  text-align: justify;
+}
+
 .cardcnt {
   background-color: #ffffff;
   text-align: center;
