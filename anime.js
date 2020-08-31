@@ -79,7 +79,7 @@ function animate(cvs,ctx) {
       const animationFunc1 = () => {
         //refBg();
         refBg1();
-        //ctx.drawImage(img, 0, 0);
+        ctx.drawImage(img, 0, 0);
         text();
         window.requestAnimationFrame( animationFunc1 );
       };
