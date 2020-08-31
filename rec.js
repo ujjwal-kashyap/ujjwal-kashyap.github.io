@@ -5,7 +5,7 @@ window.onload = function() {
   let ctx = cvs.getContext("2d");
   let vdo = document.querySelector("video");
   let fps = 30;
-  let vT = 3000;
+  let vT = 10000;
 
 
   var videoStream = cvs.captureStream(fps);
