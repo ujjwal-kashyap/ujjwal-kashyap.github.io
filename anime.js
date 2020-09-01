@@ -8,10 +8,10 @@ function animate(cvs,ctx) {
   //const tL3 = "Lightning Speed";
   //const tL10 = "The time is always right";
   //const tL11 = "to do somethig right";
-  const font = "Electrolize";
-  const fontSize = 40;
+  const font = "Merriweather";
+  const fontSize = 35;
   const lineSize = 50;
-  const text = " The time is always right to do somethig right. \n - MLK"
+  const text = "The time is always right to do something right. \n - MLK"
   var lines = [];
   var twOff = 30; // text width offset
   var tboxY = 0; // text box y cordinate starting position
@@ -19,6 +19,7 @@ function animate(cvs,ctx) {
   var tboxMover = 0; // pixels to move text box each RAF
 
   var img = new Image();   // Create new img element
+  var imagefile = './images/mlk.jpg';
   //img.crossOrigin = 'anonymous';
   var tiW = 0; // transformed image width
   var tiH = 0; // transformed image height
@@ -95,8 +96,10 @@ function animate(cvs,ctx) {
 
   // text on bg
   const textLayer = () => {
-    ctx.fillStyle = "blue";
+    ctx.globalAlpha = 0.7;
+    ctx.fillStyle = "black";
     ctx.fillRect(twOff, tboxY, cW-(2*twOff), (lineSize*lines.length)+2*(lineSize-fontSize));
+    ctx.globalAlpha = 1;
 
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
@@ -141,7 +144,7 @@ function animate(cvs,ctx) {
       };
       animationFunc1();
     };
-    img.src = './images/mlk.JPG'; // Set source path
+    img.src = imagefile; // Set source path
 
     //window.requestAnimationFrame( animationFunc );
   };
