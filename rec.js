@@ -13,14 +13,14 @@ window.onload = function() {
 
   var chunks = [];
   mediaRecorder.ondataavailable = function(e) {
-    console.log({e});
+    //console.log({e});
     chunks.push(e.data);
   };
 
   mediaRecorder.onstop = function(e) {
     var blob = new Blob(chunks, { 'type' : 'video/webm' }); // image/gif    video/mp4
-    console.log(blob);
-    console.log(chunks);
+    //console.log(blob);
+    //console.log(chunks);
     chunks = [];
     var videoURL = URL.createObjectURL(blob);
     vdo.src = videoURL;

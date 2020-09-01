@@ -7,12 +7,13 @@
       src: local('Clip'), url(./fonts/clip/Clip.ttf) format('truetype');
     }*/
    </style>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.1.0/fabric.min.js"></script>
   </head>
   <body>
     <!--story - 9:16, 540,960 1080,1920 -->
     <!--post - 4:5, 540,675(674 for ffmpeg) 1080,1350 -->
     <!--for both?? 864,1080 --->
-    <canvas width="540" height="960"> <!--960 story, 674 post -->
+    <canvas id="canvas" width="540" height="960"> <!--960 story, 674 post -->
       Your browser does not support the HTML5 canvas tag.
     </canvas>
     <video autoplay controls></video>
