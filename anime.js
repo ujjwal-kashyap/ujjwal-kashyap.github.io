@@ -11,7 +11,7 @@ function animate(cvs,ctx) {
   const font = "Merriweather";
   const fontSize = 35;
   const lineSize = 50;
-  const text = "The time is always right to do something right. \n - MLK"
+  const text = "The Quote \n @alphablue.co"
   var lines = [];
   var twOff = 30; // text width offset
   var tboxY = 0; // text box y cordinate starting position
@@ -19,7 +19,7 @@ function animate(cvs,ctx) {
   var tboxMover = 0; // pixels to move text box each RAF
 
   var img = new Image();   // Create new img element
-  var imagefile = './images/mlk.jpg';
+  var imagefile = './images/thinkingdavid.jpg';
   //img.crossOrigin = 'anonymous';
   var tiW = 0; // transformed image width
   var tiH = 0; // transformed image height
