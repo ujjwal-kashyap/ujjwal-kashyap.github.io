@@ -39,8 +39,7 @@ function animate(cvs,ctx) {
   const refBg1 = () => {
     ctx.fillStyle = "blue";
     ctx.fillRect(0, 0, rand(cW/3,cW/2), cH/2);
-
-
+    ctx.drawImage(img, 0, 0);
 
 
   };
@@ -79,7 +78,6 @@ function animate(cvs,ctx) {
       const animationFunc1 = () => {
         //refBg();
         refBg1();
-        ctx.drawImage(img, 0, 0);
         text();
         window.requestAnimationFrame( animationFunc1 );
       };
